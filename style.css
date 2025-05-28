@@ -1,119 +1,130 @@
-    body {
-      background: linear-gradient(
-        to right,
-        #a18cd1,
-        #fbc2eb
-      );
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      text-align: center;
-      color: #2a2e59;
-      margin: 0;
-    }
+body {
+  background: linear-gradient(
+    to right,
+    #a18cd1,
+    #fbc2eb
+  );
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: #2a2e59;
+  margin: 0;
+}
 
-    #container {
-      width: 300px;
-      padding: 20px;
-      border-radius: 10px;
-      background-color: #fff0f6;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
+#container {
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff0f6;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
 
-    nav {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-    }
+#container:hover {
+  box-shadow: 0 0 20px 8px rgba(162, 108, 209, 0.5);
+}
 
-    .circle {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: #f6d6ff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-    }
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 
-    .disc {
-      border: 5px solid #2a2e59;
-      border-radius: 50%;
-      margin: 10px 0;
-      width: 120px;
-      height: 120px;
-    }
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f6d6ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 
-    h1 {
-      margin: 10px 0 5px;
-      font-size: 20px;
-    }
+.disc {
+  border: 5px solid #2a2e59;
+  border-radius: 50%;
+  margin: 10px 0;
+  width: 120px;
+  height: 120px;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
 
-    p {
-      font-size: 16px;
-      font-weight: bold;
-      color: #4a4a4a;
-    }
+.disc:hover {
+  box-shadow: 0 0 15px 5px rgba(162, 108, 209, 0.7);
+}
 
-    audio {
-      width: 100%;
-      margin-top: 10px;
-    }
+h1 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+}
 
-    /* Toggle Menu Styles */
-    #menuBox {
-      display: none;
-      position: absolute;
-      top: 60px;
-      right: 10px;
-      background-color: white;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      padding: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      z-index: 100;
-    }
+p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #4a4a4a;
+}
 
-    #menuBox ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+audio {
+  width: 100%;
+  margin-top: 10px;
+}
 
-    #menuBox ul li {
-      padding: 5px 10px;
-      cursor: pointer;
-    }
+/* Toggle Menu Styles */
+#menuBox {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
 
-    #menuBox ul li:hover {
-      background-color: #f0f0f0;
-    }
+#menuBox ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    /* Media Query */
-    @media (max-width: 400px) {
-      #container {
-        width: 90%;
-        padding: 15px;
-      }
+#menuBox ul li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
 
-      .disc {
-        width: 100px;
-        height: 100px;
-      }
+#menuBox ul li:hover {
+  background-color: #f0f0f0;
+}
 
-      h1 {
-        font-size: 18px;
-      }
+/* Media Query */
+@media (max-width: 400px) {
+  #container {
+    width: 90%;
+    padding: 15px;
+  }
 
-      p {
-        font-size: 14px;
-      }
-    }
+  .disc {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
