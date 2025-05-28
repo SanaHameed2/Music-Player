@@ -8,25 +8,54 @@
   </head>
   <body>
     <div id="container">
-      <nav>
-        <div class="circle">
-          <img src="assets/img/icons8-double-left-30.png" alt="Previous">
-        </div>
-        <div class="circle">
-          <img src="assets/img/icons8-menu-30.png" alt="Menu">
-        </div>
-      </nav>
+    <nav>
+      <div class="circle">
+        <img src="assets/img/icons8-double-left-30.png" alt="Previous">
+      </div>
+      <div class="circle" id="menuBtn">
+        <img src="assets/img/icons8-menu-30.png" alt="Menu">
+      </div>
+    </nav>
 
-      <h2>Music Player</h2>
-      <img src="assets/img/disc.gif" class="disc" alt="Rotating Disc" />
-
-      <h1>Lehanga</h1>
-      <p>	Jass Manak</p>
-
-      <audio controls>
-        <source src="assets/audio/Lehanga 128 Kbps.mp3" type="audio/mpeg">
-      </audio>
+    <div id="menuBox">
+      <ul>
+        <li>Playlist</li>
+        <li>Favorites</li>
+        <li>Settings</li>
+      </ul>
     </div>
-  </body>
+
+    <h2>Music Player</h2>
+    <img src="assets/img/disc.gif" class="disc" alt="Rotating Disc" />
+
+    <h1>Lehanga</h1>
+    <p>Jass Manak</p>
+
+    <audio id="audio" controls>
+      <source src="assets/audio/Lehanga 128 Kbps.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script>
+    // Toggle menu
+    const menuBtn = document.getElementById('menuBtn');
+    const menuBox = document.getElementById('menuBox');
+
+    menuBtn.addEventListener('click', () => {
+      if (menuBox.style.display === 'block') {
+        menuBox.style.display = 'none';
+      } else {
+        menuBox.style.display = 'block';
+      }
+    });
+
+    // Hide menu if clicked outside
+    window.addEventListener('click', (e) => {
+      if (!menuBtn.contains(e.target) && !menuBox.contains(e.target)) {
+        menuBox.style.display = 'none';
+      }
+    });
+  </script>
+</body>
 </html>
 
